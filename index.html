@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Three Forks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Netflix-style Intro Overlay -->
+<div id="intro-overlay">
+  <div class="netflix-logo">The Three Forks</div>
+  <p class="click-text">Click anywhere to begin</p>
+ <audio id="netflix-audio" src="netflix_intro.mp3" preload="auto"></audio>
+</div>
+
+<!-- Your Actual Homepage Content -->
+<div id="main-content" style="display: none;">
+  <h1>Welcome to The Three Forks</h1>
+  <p>Delicious food, delivered with flair.</p>
+  <a href="thankyou.html" class="btn">Place Your Order</a>
+</div>
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('netflix-audio');
+    const overlay = document.getElementById('intro-overlay');
+    const content = document.getElementById('main-content');
+
+    audio.play();
+
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      content.style.display = 'block';
+    }, 4000); // 4 seconds for full intro
+  });
+</script>
+  <nav>
+    <div class="logo">The Three Forks</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#" class="order-btn">Order Online</a>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <h1>The Three Forks</h1>
+      <p>Authentic Indian Pure Vegetarian Cuisine</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn">View Menu</a>
+        <a href="#order" class="btn">Order Online</a>
+      </div>
+    </div>
+  </header>
+  <!-- 🔽 Popup Modal for Order Online -->
+<div id="order-modal" class="modal">
+  <div class="modal-content">
+    <h2>Order Online</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://t3.ftcdn.net/jpg/08/72/76/76/240_F_872767655_NUNhSjeA6NGPBbusIQSx3Ke6j3NH6ENC.jpg" alt="Paneer Tikka Masala" />
+        <h3>Paneer Tikka Masala</h3>
+        <p>Rich tomato curry with cottage cheese</p>
+        <span>₹320</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="https://t3.ftcdn.net/jpg/14/43/40/24/240_F_1443402449_yGdO1RNAvkvJ4w2T3RLjEm8eAfJOBgdJ.jpg" alt="Masala Dosa" />
+        <h3>Masala Dosa</h3>
+        <p>South Indian crepe with spiced potato</p>
+        <span>₹180</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="https://t4.ftcdn.net/jpg/14/95/17/37/240_F_1495173792_8r6RCCeU7iBKkuT3kr0kWLGuoavMFxvc.jpg" alt="Gujarati Thali" />
+        <h3>Gujarati Thali</h3>
+        <p>Complete meal with dal, roti, rice & sweet</p>
+        <span>₹450</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+    <a href="thankyou.html" class="btn place-order-btn">Place Your Order</a>
+    <button class="btn close-btn">Close</button>
+  
+  </div>
+</div>
+
+
+
+  <section class="dishes" id="menu">
+    <h2>Featured Dishes</h2>
+    <div class="dish-grid">
+      <div class="dish-card">
+        <img src="https://t3.ftcdn.net/jpg/08/72/76/76/240_F_872767655_NUNhSjeA6NGPBbusIQSx3Ke6j3NH6ENC.jpg" alt="Paneer Tikka Masala" />
+        <h3>Paneer Tikka Masala</h3>
+        <p>Rich and creamy tomato-based curry with cottage cheese chunks and aromatic spices.</p>
+        <span>₹320</span>
+      </div>
+      <div class="dish-card">
+        <img src="https://t3.ftcdn.net/jpg/14/43/40/24/240_F_1443402449_yGdO1RNAvkvJ4w2T3RLjEm8eAfJOBgdJ.jpg" alt="Masala Dosa" />
+        <h3>Masala Dosa</h3>
+        <p>Crispy South Indian crepe filled with spiced potato, served with chutney and sambar.</p>
+        <span>₹180</span>
+      </div>
+      <div class="dish-card">
+        <img src="https://t4.ftcdn.net/jpg/14/95/17/37/240_F_1495173792_8r6RCCeU7iBKkuT3kr0kWLGuoavMFxvc.jpg" alt="Gujarati Thali" />
+        <h3>Gujarati Thali</h3>
+        <p>Traditional complete meal with dal, vegetables, roti, rice, and sweet dish.</p>
+        <span>₹450</span>
+      </div>
+    </div>
+  </section>
+
+ <section id="about">
+  <div class="blur-box">
+    <h2>About Us</h2>
+    <p>At The Three Forks, we celebrate the rich diversity of Indian vegetarian cuisine. Our chefs craft each dish using traditional recipes from Punjab, South India, and Gujarat — all with fresh ingredients and authentic flavors. Whether you're dining in or ordering online, we promise a wholesome experience that nourishes both body and soul.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="blur-box">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: (955) 123-4567</p>
+    <p>📧 Email: info@threeforks.com</p>
+    <p>📍 Address: Race Course Ring Road, Rajkot, Gujarat</p>
+    <p>🕒 Hours: 11:00 AM to 11:00 PM</p>
+  </div>
+</section>
+<section id="location">
+  <div class="blur-box scroll-fade">
+    <h2>Our Location</h2>
+    <p>📍 Race Course Ring Road, Rajkot, Gujarat</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.446969351219!2d70.7839287752037!3d22.29161177970088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca3c2a2b1b2f%3A0x9e2e3c5c6a6e2b0!2sRace%20Course%20Ring%20Road%2C%20Rajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000"
+      width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
+    </iframe>
+    <br /><br />
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Race+Course+Ring+Road,+Rajkot,+Gujarat"
+       target="_blank" class="btn" id="direction-btn">
+      📍 Get Directions
+    </a>
+  </div>
+</section>
+
+  <footer>
+    <p>© 2025 The Three Forks. All rights reserved.</p>
+  </footer>
+
+  
+  <script>
+  const elements = document.querySelectorAll('.scroll-fade');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+<script>
+  const links = document.querySelectorAll('nav ul li a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      links.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
+<script>
+ const directionBtn = document.getElementById('direction-btn');
+  directionBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("Opening Google Maps for directions to The Three Forks, Rajkot!");
+    window.open(directionBtn.href, '_blank');
+  });
+</script>
+<!--online order script -->
+
+<script>
+  
+  const modal = document.getElementById('order-modal');
+  const closeBtn = document.querySelector('.close-btn');
+  const orderBtns = document.querySelectorAll('.order-btn, .hero .btn');
+
+  orderBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+</script>
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('netflix-audio');
+    const overlay = document.getElementById('intro-overlay');
+    const content = document.getElementById('main-content');
+
+    // Try to play audio
+    audio.currentTime = 0;
+    audio.play().catch(() => {
+      // If autoplay fails, wait for user interaction
+      document.body.addEventListener('click', () => {
+        audio.play();
+      }, { once: true });
+    });
+
+    // Hide overlay after 4s
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      content.style.display = 'block';
+    }, 4000);
+  });
+</script>
+
+</body>
+</html>

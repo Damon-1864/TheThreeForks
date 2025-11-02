@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+nav.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+}
+nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold; 
+}
+.order-btn {
+  background: #d35400;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+.hero-buttons .btn {
+  background: #d35400;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.about {
+  display: flex;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+.about .text {
+  flex: 1;
+}
+.about .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.dishes {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+}
+.dishes h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.dish-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.dish-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 }
+  .dish-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+.blur-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  color: #333;
+  text-align: center;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-fade {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+.scroll-fade.visible {
+  opacity: 1;
+  animation: fadeInUp 1s ease forwards;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #d35400;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+nav ul li a.active {
+  background-color: #d35400;
+  color: white;
+}
+.btn {
+  background: #d35400;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+
+.btn:hover {
+  background: #a84300;
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .blur-box {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #1c1c1c;
+  color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.menu-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.menu-item {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.menu-item h3 {
+  margin: 0.5rem 0;
+  color: #ff4d4d;
+}
+
+.menu-item p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.menu-item span {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.close-btn {
+  margin-top: 2rem;
+  background: #444;
+}
+@keyframes bloodyGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    border: 2px solid rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+    border: 2px solid rgba(255, 0, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    border: 2px solid rgba(255, 0, 0, 0.5);
+  }
+}
+
+.modal-content.bloody {
+  animation: bloodyGlow 1.5s ease-in-out infinite;
+}
+.place-order-btn {
+  background: #ff1a1a;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  animation: pulseRed 1.5s infinite;
+}
+
+@keyframes pulseRed {
+  0% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(255, 0, 0, 0.8); }
+  100% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); }
+}
+/* Netflix Intro Styles */
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 4s ease forwards;
+  animation-delay: 3s;
+}
+
+.netflix-logo {
+  font-size: 10rem;
+  font-weight: bold;
+  color: rgb(254, 254, 254);
+  animation: zoomGlow 3s ease forwards;
+  font-family: 'Arial Black', sans-serif;
+  text-shadow: 0 0 30px red;
+}
+
+@keyframes zoomGlow {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); text-shadow: 0 0 60px red; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+.fade-out {
+  animation: fadeOut 4s ease forwards;
+}
+.click-text {
+  position: absolute;
+  bottom: 60px;
+  font-size: 1rem;
+  color: #ccc;
+  font-family: 'Open Sans', sans-serif;
+  animation: fadeInOut 3s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
